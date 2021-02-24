@@ -1,0 +1,125 @@
+ 
+Register API
+
+URL: http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/register
+
+Request Type:- POST
+
+Body:- {
+	"name":"amit shamra",
+	"gender":"male",
+	"balance":57000.0,
+	"account_no":103,
+	"accounttype":"saving",
+	"email":"amit@gmail.com",
+	"password":"123456"
+}
+
+Response:-
+{
+    "id": 25,
+    "name": "amit shamra",
+    "gender": "male",
+    "account_no": 103,
+    "balance": 57000,
+    "accounttype": "saving",
+    "pub_date": "2020-09-17T18:36:51.588018+05:30",
+    "email": "amit@gmail.com",
+    "password": "123456"
+}
+
+-----------------------------------------------------------------------------------------
+
+Login API
+
+URL:- http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/login
+
+Request Type:- POST
+
+Body:- 
+      {
+  "email":"priya@gmail.com",
+  "password":"123456"
+}
+
+
+Response:-
+{
+    "id": 17,
+    "name": "Priya Soni",
+    "gender": "female",
+    "account_no": 203,
+    "balance": 15340,
+    "email": "priya@gmail.com",
+    "accounttype": "saving",
+    "pub_date": "2020-06-20T11:29:36Z"
+}
+
+
+
+
+-----------------------------------------------------------------------------------------
+
+List of Customers
+
+URL:- http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/
+
+Request Type:- GET
+
+
+Response:-
+[{"id": 30, "name": "Harsh verma", "gender": "male", "account_no": 116, "balance": 40024, "accounttype": "saving", "pub_date": "2020-10-07T12:46:15.499114+05:30", "email": "harshi@gmail.com", "password": "78673234"}, {"id": 31, "name": "amit shamra", "gender": "male", "account_no": 103, "balance": 57000, "accounttype": "saving", "pub_date": "2020-10-08T09:34:14.730551+05:30", "email": "amit@gmail.com", "password": "123456"}, {"id": 32, "name": "Shivani verma", "gender": "female", "account_no": 111, "balance": 25364, "accounttype": "saving", "pub_date": "2020-10-08T09:34:14.730551+05:30", "email": "shivani@gmail.com", "password": "2345678"}]
+-----------------------------------------------------------------------------------------
+
+Update Record
+
+
+URL:- http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/17/
+
+Request Type: PUT
+
+Request Body:-
+{
+    "id": 17,
+    "name": "Priya Soni",
+    "gender": "female",
+    "account_no": 203,
+    "balance": 78000.0,
+    "email": "priya@gmail.com",
+    "accounttype": "saving",
+    "pub_date": "2020-06-20T11:29:36Z"
+}
+
+Response:-
+{
+    "id": 17,
+    "name": "Priya Soni",
+    "gender": "female",
+    "account_no": 203,
+    "balance": 78000,
+    "accounttype": "saving",
+    "pub_date": "2020-06-20T16:59:36+05:30",
+    "email": "priya@gmail.com",
+    "password": "123456"
+}
+
+-----------------------------------------------------------------------------------------
+
+DELETE Record
+
+URL:http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/17/
+
+Request Type: DELETE
+
+
+Response:
+Delete Successfully
+
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
